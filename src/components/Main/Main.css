@@ -1,0 +1,22 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+background-color:#004C3F ;
+}
+.section_heading{
+  color:#FBF7ED;
+}
+
+.card_light{
+  background-color:#FBF7ED;
+}
+input{
+  border: solid 1px black;
+  border-radius: 3px;
+}
+
+.search_bar{
+width: 100%;
+}

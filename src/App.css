@@ -1,0 +1,12 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.nominate_button{
+  background-color: #008060;
+  color:#FFFFFF;
+}
+.nominate_button:hover{
+  background-color: #004C3F;
+    color:#FFFFFF;
+}
