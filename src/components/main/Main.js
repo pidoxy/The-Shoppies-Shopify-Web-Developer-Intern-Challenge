@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Main.css';
-import Result from "../../components/Results/Result";
-import NominationList from "../../components/Results/NominationList";
+import Result from "../../components/results/Result";
+import NominationList from "../../components/results/NominationList";
 import SearchBox from "../../components/Search";
 
 
