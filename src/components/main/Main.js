@@ -22,7 +22,10 @@ const MainApp = () => {
   const [nominations, setNominations] = useState([]);
   const [disableButtons, setDisableButtons] = useState([]);
 
-    const getMovies = async () => {
+   
+
+    useEffect( () => {
+       const getMovies = async () => {
       const url = `https://www.omdbapi.com/?apikey=${APP_KEY}&s=${searchValue}&type=movie`;
       const response = await fetch(url);
 
@@ -32,9 +35,8 @@ const MainApp = () => {
       }
     };
 
-    useEffect( () => {
     getMovies(searchValue);
-  }, []);
+  }, [searchValue]);
 
   useEffect( () => {
     const movieNomination = JSON.parse(localStorage.getItem('Shoppies-nomination')
