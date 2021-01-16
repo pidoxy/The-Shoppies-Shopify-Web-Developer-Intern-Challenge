@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './Main.css';
 import Result from "../../components/Results/Result";
+import NominationList from "../../components/Results/NominationList";
 import SearchBox from "../../components/Search";
+
+
+// Things to do
+// max-width for nominations
+// align buttons
+// fix max no. of nominations
+
+
 
 
 const MainApp = () => {
@@ -57,7 +66,7 @@ const MainApp = () => {
 
     return (
     <div className="mt-5 container">
-        <h1 className="section_heading">The Tripples</h1>
+        <h1 className="section_heading">The Shoppies</h1>
         <div className="card container card_light">
           <div className="card-title pt-3">
             Movie Title
@@ -68,7 +77,7 @@ const MainApp = () => {
 
 
                         {/* movielist */}
-          <div className="card card_light mt-1 mb-3">
+          <div className="card card_light col-12 col-md-6 mr-md-2 mb-3">
             <div className="card-body">
               <h3>Results for {searchValue}</h3>
               {movies.map((movie, index) => (
@@ -91,11 +100,12 @@ const MainApp = () => {
             </div>
           </div>
           
-          <div className="card card_light mb-3">
+          {/* Nomination list */}
+          <div className="card col-12 col-md-6 ml-md-2 card_light mb-3">
             <div className="card-body">
               <h3>Nominations</h3>
               {nominations &&nominations.map((nominated, index) => (
-              <Result 
+              <NominationList 
               nominations={nominations}
               title={nominated.title}
               year={nominated.year}
@@ -103,8 +113,6 @@ const MainApp = () => {
               imdbID={nominated.imdbID}
               buttonName="remove"
               handleNominationsClick={removeMovie}
-              disableButtons={disableButtons}
-              setDisableButtons={setDisableButtons}
               color="remove_button" 
               buttonId="remove_button" 
               />
