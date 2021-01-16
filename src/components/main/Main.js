@@ -34,7 +34,7 @@ const MainApp = () => {
 
     useEffect( () => {
     getMovies(searchValue);
-  }, [searchValue]);
+  }, []);
 
   useEffect( () => {
     const movieNomination = JSON.parse(localStorage.getItem('Shoppies-nomination')
