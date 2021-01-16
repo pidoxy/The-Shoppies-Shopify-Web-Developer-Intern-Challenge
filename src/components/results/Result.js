@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Result = (props) =>  {
-  const ButtonNominate = props.buttonComponent;
+  // const ButtonNominate = props.buttonComponent;
 
   return(
   <div >
