@@ -5,12 +5,6 @@ import NominationList from "../../components/results/NominationList";
 import SearchBox from "../../components/Search";
 
 
-// Things to do
-// max-width for nominations
-// align buttons
-// fix max no. of nominations
-
-
 
 
 const MainApp = () => {
